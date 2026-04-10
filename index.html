@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Birthday Gift Website 🎁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Password Protection Screen -->
+    <div id="passwordScreen" class="password-screen">
+        <div class="password-container">
+            <h1>🎂 Special Birthday Gift 🎂</h1>
+            <p>This is a special surprise! Enter the password to unlock it.</p>
+            <input 
+                type="password" 
+                id="passwordInput" 
+                placeholder="Enter password..." 
+                class="password-input"
+            >
+            <button id="passwordBtn" class="password-btn">Unlock</button>
+            <p class="hint">💡 Hint: Think of something sweet and special</p>
+        </div>
+    </div>
+
+    <!-- Main Website -->
+    <div id="mainContent" class="hidden">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎉 Happy Birthday! 🎉</h1>
+            <p>Click on each gift box to reveal wonderful surprises...</p>
+        </header>
+
+        <!-- Gift Grid Container -->
+        <main class="gifts-container">
+            <!-- Gift 1: Birthday Message -->
+            <div class="gift-box" data-gift="1">
+                <div class="gift-wrapper">
+                    <div class="gift-box-inner">
+                        <span class="gift-emoji">💌</span>
+                    </div>
+                    <div class="gift-ribbon-horizontal"></div>
+                    <div class="gift-ribbon-vertical"></div>
+                </div>
+                <p class="gift-label">Message</p>
+            </div>
+
+            <!-- Gift 2: Photo Gallery -->
+            <div class="gift-box" data-gift="2">
+                <div class="gift-wrapper">
+                    <div class="gift-box-inner">
+                        <span class="gift-emoji">📸</span>
+                    </div>
+                    <div class="gift-ribbon-horizontal"></div>
+                    <div class="gift-ribbon-vertical"></div>
+                </div>
+                <p class="gift-label">Photo</p>
+            </div>
+
+            <!-- Gift 3: Music Player -->
+            <div class="gift-box" data-gift="3">
+                <div class="gift-wrapper">
+                    <div class="gift-box-inner">
+                        <span class="gift-emoji">🎵</span>
+                    </div>
+                    <div class="gift-ribbon-horizontal"></div>
+                    <div class="gift-ribbon-vertical"></div>
+                </div>
+                <p class="gift-label">Music</p>
+            </div>
+
+            <!-- Gift 4: Secret Message -->
+            <div class="gift-box" data-gift="4">
+                <div class="gift-wrapper">
+                    <div class="gift-box-inner">
+                        <span class="gift-emoji">🔐</span>
+                    </div>
+                    <div class="gift-ribbon-horizontal"></div>
+                    <div class="gift-ribbon-vertical"></div>
+                </div>
+                <p class="gift-label">Secret</p>
+            </div>
+
+            <!-- Gift 5: GitHub Link -->
+            <div class="gift-box" data-gift="5">
+                <div class="gift-wrapper">
+                    <div class="gift-box-inner">
+                        <span class="gift-emoji">💻</span>
+                    </div>
+                    <div class="gift-ribbon-horizontal"></div>
+                    <div class="gift-ribbon-vertical"></div>
+                </div>
+                <p class="gift-label">Surprise</p>
+            </div>
+
+            <!-- Gift 6: Video/Special -->
+            <div class="gift-box" data-gift="6">
+                <div class="gift-wrapper">
+                    <div class="gift-box-inner">
+                        <span class="gift-emoji">🎊</span>
+                    </div>
+                    <div class="gift-ribbon-horizontal"></div>
+                    <div class="gift-ribbon-vertical"></div>
+                </div>
+                <p class="gift-label">Celebration</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal/Popup for Gift Content -->
+    <div id="giftModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modalBody" class="modal-body">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
